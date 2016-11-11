@@ -64,26 +64,55 @@
 					<td class="item-total">199.00</td>
 					<td><a class="remove-item" href="">[REMOVER]</a></td>
 				</tr>
-				<tr>
-					<td><img src="imagens/camiseta.jpg"></td>
-					<td>Camiseta G</td>
-					<td>1</td>
-					<td>25.00</td>
-					<td class="item-total">25.00</td>
-					<td><a class="remove-item" href="">[REMOVER]</a></td>
-				</tr>
 			</tbody>
 		</table>
 
+		<div>
+			Valor total: R$<span class="valor-total">0</span>
+		</div>
+		<div>
+			Quantidade total de itens: <span class="quantidade-itens">0</span>
+		</div>
+		<div>
+			<input type="button" value="Undo" class="undo">
+		</div>
 	</div>
-	<div>
-		Valor total: R$<span id="valor-total">0</span>
-	</div>
-	<div>
-		Quantidade total de itens: <span id="quantidade-itens">0</span>
-	</div>
-	<div>
-		<input type="button" value="Undo" id="undo">
+
+	<div class="carrinho">
+		<h2>Carrinho entrega em Vitoria</h2>
+			<table>
+				<thead>
+					<tr>
+						<td></td>
+						<td>Nome</td>
+						<td>Quantidade</td>
+						<td>Valor</td>
+						<td>Total</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><img src="imagens/camiseta.jpg"></td>
+						<td>Camiseta G</td>
+						<td>1</td>
+						<td>25.00</td>
+						<td class="item-total">25.00</td>
+						<td><a class="remove-item" href="">[REMOVER]</a></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div>
+				Valor total: R$<span class="valor-total">0</span>
+			</div>
+
+			<div>
+				Quantidade total de itens: <span class="quantidade-itens">0</span>
+			</div>
+
+			<div>
+				<input type="button" value="Undo" class="undo">
+			</div>
 	</div>
 
 	<script src="jquery-3.1.1.slim.min.js"></script>
