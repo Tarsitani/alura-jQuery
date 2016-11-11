@@ -1,4 +1,4 @@
-
+//versao Lucas cabecao
 var removeItem = function(){
     event.preventDefault();
 
@@ -36,3 +36,33 @@ var aposInicializado = function(){
 };
 
 $(aposInicializado);
+
+//versao mais clean, sem repetição de codigo
+var atualizaDados = function(){
+    var items = $(".item-total");
+    var total = 0;
+    for(var i=0; i < items.length; i++) {
+        var conteudo = $(items[i]).text();
+        var preco = parseFloat(conteudo);
+        total += preco;
+    }
+    $("#valor-total").text(total);
+    $("#quantidade-de-itens").text(items.length);
+};
+
+//a diferenca está em que, toda vez que se remove um item se faz o caluclo do total novamente atualizando os dados
+// var removeItem = function(event) {
+//     event.preventDefault();
+
+//     var self = $(this);
+//     self.closest("tr").remove();
+//     atualizaDados();
+// };
+
+// var aposInicializado = function() {
+
+//     $(".remove-item").click(removeItem);
+//     atualizaDados();
+// };
+
+// $(aposInicializado);
