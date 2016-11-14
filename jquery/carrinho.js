@@ -63,15 +63,32 @@ var daDestaque = function(){
     //cria mais ed uma classe CSS com o metodo css
     // $(this).css({"background" : "#ccc",
     //             "opacity" : 0.05});
+    $(this).find(".remove-item").fadeIn();
     $(this).addClass("hovering");
 };
 
 var tiraDestaque = function(){
     //$(this).css("backgorund", ""); //deixa como antes no migue
+    $(this).find(".remove-item").fadeOut();
     $(this).removeClass("hovering");
 
 };
 
+// var escondePorpaganda = function(event){
+//     event.preventDefault();
+//     $(".propaganda").hide();
+// };
+
+// var mostraPropaganda = function(event){
+//     event.preventDefault();
+//     $(".propaganda").show();
+// };
+
+var aletrnaPropaganda = function(event){
+    event.preventDefault();
+    $(".propaganda").fadeToggle();
+    $(".alterna-propaganda").toggle();
+};
 
 var aposInicializado = function() {
 
@@ -88,6 +105,8 @@ var aposInicializado = function() {
 
     });
     $(".carrinho tbody tr").hover(daDestaque, tiraDestaque);//quando o mouse cobrir, passar por um elemento tr chama daDestaque e quando sai chama tiraDestaque
+    $(".alterna-propaganda").click(aletrnaPropaganda);
+
 
 };
 
