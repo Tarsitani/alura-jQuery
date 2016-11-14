@@ -59,6 +59,19 @@ var undo = function(){
     atualizaDados();
 };
 
+var daDestaque = function(){
+    //cria mais ed uma classe CSS com o metodo css
+    // $(this).css({"background" : "#ccc",
+    //             "opacity" : 0.05});
+    $(this).addClass("hovering");
+};
+
+var tiraDestaque = function(){
+    //$(this).css("backgorund", ""); //deixa como antes no migue
+    $(this).removeClass("hovering");
+
+};
+
 
 var aposInicializado = function() {
 
@@ -74,6 +87,7 @@ var aposInicializado = function() {
         });
 
     });
+    $(".carrinho tbody tr").hover(daDestaque, tiraDestaque);//quando o mouse cobrir, passar por um elemento tr chama daDestaque e quando sai chama tiraDestaque
 
 };
 

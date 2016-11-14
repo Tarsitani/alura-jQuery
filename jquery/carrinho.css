@@ -37,6 +37,9 @@ td {
 	border-bottom: 1px solid #ddd;
 }
 
+.hovering {
+	background: #ccc;
+}
 
 .propaganda td {
 	background: #9F0;
